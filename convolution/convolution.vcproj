@@ -162,7 +162,31 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
+				RelativePath=".\array.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\easyfmt.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\info.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\main.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qstf.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qstfmt.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qstnode.cpp"
 				>
 			</File>
 		</Filter>
@@ -171,6 +195,30 @@
 			Filter="h;hpp;hxx;hm;inl;inc;xsd"
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
+			<File
+				RelativePath=".\array.h"
+				>
+			</File>
+			<File
+				RelativePath=".\easyfmt.h"
+				>
+			</File>
+			<File
+				RelativePath=".\info.h"
+				>
+			</File>
+			<File
+				RelativePath=".\qstf.h"
+				>
+			</File>
+			<File
+				RelativePath=".\qstfmt.h"
+				>
+			</File>
+			<File
+				RelativePath=".\qstnode.h"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="Resource Files"
