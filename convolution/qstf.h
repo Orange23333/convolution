@@ -15,6 +15,6 @@ public:
 	void LoadFromFile(std::string path){
 		
 	}
-}
+};
 
 #endif

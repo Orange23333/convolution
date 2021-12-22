@@ -13,6 +13,6 @@ public:
 	
 	QuestionFormat();
 	~QuestionFormat();
-}
+};
 
 #endif

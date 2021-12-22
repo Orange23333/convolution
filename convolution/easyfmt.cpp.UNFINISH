@@ -1,0 +1,100 @@
+// EASY ForMaT
+
+#include "easyfmt.h"
+
+inline void EasyFormat::_NewLine(int &line, int &row){
+	line++;
+	row = 1;
+}
+
+inline void EasyFormat::_LevelUp(){
+	;
+}
+
+inline void EasyFormat::_LevelDown(std::vector<QuestionNode*> &leveledNodes){
+	leveledNodes.pop_back();
+}
+
+void EasyFormat::_PrintMessage(
+	const std::string type,
+	const std::string path,
+	const int line,
+	const int row,
+	const std::string content
+){
+	std::cout
+		<<'['
+		<<type
+		<<"]: In the file \""
+		<<path
+		<<"\", line "
+		<<line
+		<<", row "
+		<<row
+		<<": "
+		<<content
+		<<std::endl;
+}
+
+void EasyFormat::_PrintMessage(
+	const std::string type,
+	const std::string path,
+	const int line,
+	const std::string content
+){
+	std::cout
+		<<'['
+		<<type
+		<<"]: In the file \""
+		<<path
+		<<"\", line "
+		<<line
+		<<": "
+		<<content
+		<<std::endl;
+}
+
+//请务必从新的一行开始
+int EasyFormat::ReadFromText(const std::string text, const std::string db_path, const int db_beginLine){
+	int line, row;
+	const char *ptr = text.data();
+	const char *ptr_end = text.data() + text.length();
+	std::vector<QuestionNode*> leveledNodes;
+	std::string temp;
+	
+	root=new QuestionNode();
+	leveledNodes.push_back(root);
+	
+	line = db_beginLine, row = 1;
+//#warning 可能存在地址达到最大值导致溢出的情况，不过对于这个安全性要求不高的本地应用暂时不考虑
+	for(;ptr<ptr_end;ptr++){
+		if(*ptr=='#'){
+			for(;ptr<ptr_end;ptr++){
+				if(*ptr=='\n'){
+					_NewLine(line, row);
+					break;
+				}
+			}
+		}else if(*ptr=='>'){
+			QuestionNode* tempQN = new QuestionNode();
+			leveledNodes[leveledNodes.size()-1]->get_SubNodes()->push_back(tempQN);
+			_LevelUp();
+		}else if(*ptr=='<'){
+			if(leveledNodes.size()<=1){
+				_PrintMessage("！错误", db_path, line, row, "此处有多余的’<‘或者前面缺少'>'。");
+				return -1;
+			}
+			_LevelDown(leveledNodes);
+		}
+		row++;
+	}
+}
+
+EasyFormat::EasyFormat(){
+	;
+}
+EasyFormat::~EasyFormat(){
+	if(root!=NULL){
+		delete[] root;
+	}
+}

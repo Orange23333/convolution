@@ -8,13 +8,13 @@
 
 class QuestionNode{
 private:
-	std::string m_text
-	std::vector<QuestionNode> subNodes;
+	std::string m_text;
+	std::vector<QuestionNode*> subNodes;
 public:
 	std::string get_Text();
 	void get_Text(std::string value);
 	
-	std::vector<QuestionNode>* get_SubNodes();
+	std::vector<QuestionNode*>* get_SubNodes();
 	void Clear();
 	
 	QuestionNode();

@@ -10,8 +10,8 @@ QuestionFormat::QuestionFormat(){
 	root=NULL;
 }
 
-~QuestionFormat::QuestionFormat(){
+QuestionFormat::~QuestionFormat(){
 	if(root!=NULL){
-		root.Clear();
+		root->Clear();
 	}
 }

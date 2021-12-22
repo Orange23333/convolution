@@ -13,7 +13,7 @@
 	#define INFO_PROGRAM_DESCRIPTION "A study tool."
 	#define INFO_PROJECT_URL "https://github.com/Orange23333/convolution"
 
-#define TEXTLOGO_HEIGHT 18
+#define TEXTLOGO_HEIGHT 19
 #define TEXTLOGO_WIDTH 33
 extern const char textLogo[TEXTLOGO_HEIGHT][TEXTLOGO_WIDTH];
 

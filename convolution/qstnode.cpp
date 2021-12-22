@@ -10,14 +10,15 @@ void QuestionNode::get_Text(std::string value){
 	this->m_text=value;
 }
 
-std::vector<QuestionNode>* QuestionNode::get_SubNodes(){
+std::vector<QuestionNode*>* QuestionNode::get_SubNodes(){
 	return &subNodes;
 }
 
 void QuestionNode::Clear(){
 	int i;
 	for(i=0;i<subNodes.size();i++){
-		subNodes[i].Clear();
+		subNodes[i]->Clear();
+		delete[] subNodes[i];
 	}
 	subNodes.clear();
 }
@@ -27,5 +28,5 @@ QuestionNode::QuestionNode(){
 }
 
 QuestionNode::~QuestionNode(){
-	subNodes.clear();
+	Clear();
 }

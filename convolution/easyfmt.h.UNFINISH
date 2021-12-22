@@ -1,0 +1,40 @@
+// EASY ForMaT
+
+#ifndef __EASYFMT_H_
+	#define __EASYFMT_H_
+	
+	#include <string>
+	#include <stack>
+	
+	#include "qstfmt.h"
+	#include "qstnode.h"
+	#include "utility.h"
+
+class EasyFormat : public QuestionFormat{
+private:
+	inline void _NewLine(int &line, int &row);
+	inline void _LevelUp();
+	inline void _LevelDown(std::vector<QuestionNode*> &leveledNodes);
+	
+	void _PrintMessage(
+		const std::string type,
+		const std::string path,
+		const int line,
+		const int row,
+		const std::string content
+	);
+	void _PrintMessage(
+		const std::string type,
+		const std::string path,
+		const int line,
+		const std::string content
+	);
+public:
+	//请务必从新的一行开始
+	int ReadFromText(const std::string text, const std::string db_path, const int db_beginLine);
+	
+	EasyFormat();
+	~EasyFormat();
+};
+
+#endif
