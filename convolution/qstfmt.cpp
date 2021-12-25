@@ -5,13 +5,23 @@
 QuestionNode* QuestionFormat::get_Root(){
 	return root;
 }
+QuestionNode* QuestionFormat::NewRoot(){
+	Clear();
+	root=new QuestionNode();
+	return get_Root();
+}
+
+void QuestionFormat::Clear(){
+	if(root!=NULL){
+		root->Clear();
+		delete[] root;
+	}
+}
 
 QuestionFormat::QuestionFormat(){
 	root=NULL;
 }
 
 QuestionFormat::~QuestionFormat(){
-	if(root!=NULL){
-		root->Clear();
-	}
+	Clear();
 }

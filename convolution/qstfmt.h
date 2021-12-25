@@ -10,6 +10,9 @@ protected:
 	QuestionNode* root;
 public:
 	QuestionNode* get_Root();
+	QuestionNode* NewRoot();
+	
+	void Clear();
 	
 	QuestionFormat();
 	~QuestionFormat();

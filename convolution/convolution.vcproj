@@ -162,7 +162,11 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath=".\array.cpp"
+				RelativePath=".\anss.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\exam.cpp"
 				>
 			</File>
 			<File
@@ -186,6 +190,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\rlsfmt.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\rndqst.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\utility.cpp"
 				>
 			</File>
@@ -196,11 +208,15 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
+				RelativePath=".\anss.h"
+				>
+			</File>
+			<File
 				RelativePath=".\array.h"
 				>
 			</File>
 			<File
-				RelativePath=".\ez0fmt.h"
+				RelativePath=".\exam.h"
 				>
 			</File>
 			<File
@@ -217,6 +233,14 @@
 			</File>
 			<File
 				RelativePath=".\qstnode.h"
+				>
+			</File>
+			<File
+				RelativePath=".\rlsfmt.h"
+				>
+			</File>
+			<File
+				RelativePath=".\rndqst.h"
 				>
 			</File>
 			<File
